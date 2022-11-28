@@ -9,14 +9,8 @@
 - Upload Image to Server
 
 ### Setup
-git clone https://github.com/TranBaVinhSon/udemy-rails-api
-
-cd udemy-rails-api
-
-bundle install
-
-rails db:migrate
-
-rails db:seed (Optional. But you will see error when generate Review data. It's Ok)
-
-rails s to run server and have fun!
+- cd udemy-rails-api
+- bundle install
+- rails db:migrate
+- rails db:seed (Optional. But you will see error when generate Review data. It's Ok)
+- rails s to run server and have fun!
