@@ -16,6 +16,8 @@ class Api::V1::SessionsController < ApplicationController
   # log out
   def destroy
     sign_out @user
+    @user.generate_new_authentication_token
+    json_response "Log out successfully", true, {}, :ok
   end
 
   private
@@ -34,7 +36,7 @@ class Api::V1::SessionsController < ApplicationController
   end
 
   def valid_token
-    @user = User.find_by authenticate_token: request.headers["AUTH-TOKEN"]
+    @user = User.find_by authentication_token: request.headers["AUTH-TOKEN"]
     if @user
       return @user
     else
