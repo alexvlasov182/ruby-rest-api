@@ -49,7 +49,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'bullet', '~> 5.6.1'
+  #gem 'bullet', '~> 5.6.1'
 end
 
 group :test do
@@ -70,3 +70,6 @@ gem 'koala', '~> 3.0.0'
 gem 'faker'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'counter_culture', '~> 1.8'
+
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '3543363026121ee28d98dfce4cb6366980c055ee'
+gem 'paperclip', '~> 5.0.0'
