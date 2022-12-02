@@ -49,6 +49,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'bullet', '~> 5.6.1'
 end
 
 group :test do
@@ -67,3 +68,5 @@ gem 'simple_token_authentication', '~> 1.0'
 gem 'koala', '~> 3.0.0'
 
 gem 'faker'
+gem 'active_model_serializers', '~> 0.10.0'
+gem 'counter_culture', '~> 1.8'

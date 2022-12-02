@@ -2,12 +2,14 @@ class Api::V1::BooksController < ApplicationController
   before_action :load_book, only: :show
 
   def index
-    @books = Book.all
-    json_response "Index books successfully", true, {books: @books}, :ok
+    @books = Book.includes(:reviews)
+    books_serializer = parse_json @books
+    json_response "Index books successfully", true, {books: books_serializer}, :ok
   end
 
   def show
-    json_response "Show book successfully", true, {book: @book}, :ok
+    book_serializer = parse_json @book
+    json_response "Show book successfully", true, {book: book_serializer}, :ok
   end
 
   private
